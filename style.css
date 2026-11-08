@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ==========================================================
+   MAPA DO ARQUIVO
+   1. Reset
+   2. Variáveis
+   3. Base
+   4. Elementos globais
+   5. Layout principal (main)
+   6. Cabeçalho e navegação
+   7. Seção de paisagem (Suíça / Oregon)   
+   8. Card                                  
+   9. Rodapé                       
+   ========================================================== */
+
+
+
+
+/* ==== 1. Reset ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==== 2. Variáveis ==== */
+:root
+{
+    --cor-de-fundo-suica: #f7f7e7;
+    --cor-principal-suica: #beeec0 ;
+    --cor-secundaria-suica: #588157;
+    --cor-de-fundo-oregon: #e8d1a7;
+    --cor-principal-oregon: #8d9167;
+    --cor-secundaria-oregon: #84592b;
+}
+
+
+/* ==== 3. Base (html, body) ==== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ==== 4. Elementos globais ==== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.311);
+    
+    
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.311);
+}
+
+ul li {
+    list-style: none;
+    :hover {
+        text-decoration: underline;
+        color: var(--cor-secundaria-suica);
+    }
+    
+}
+
+
+/* ==== 5. Layout principal ==== */
+main {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    width: 100%;
+     max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* ==== 6. Cabeçalho e navegação ==== */
+
+header {
+    background-color: var(--cor-principal-suica);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+
+    display: flex;
+    gap:50px;
+    align-items: center;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-lista {
+    
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ==== 7. Seção Suíça (.paisagem-paisagem--suica) ==== *//* a fazer */
+
+
+.paisagem-paisagem--suica {
+    background:
+            linear-gradient(to bottom, var(--cor-principal-suica),
+             transparent 160px),
+            linear-gradient(to top, var(--cor-de-fundo-oregon),
+             transparent 160px),
+            var(--cor-de-fundo-suica);
+    padding: 50px;
+    text-align: center;
+    
+}
+
+
+h2 {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+/* ==== 8. Seção Oregon (.paisagem-paisagem--oregon) ==== */
+
+.paisagem-paisagem--oregon {
+    background:
+            linear-gradient(to bottom, var(--cor-de-fundo-oregon),
+             transparent 160px),
+            linear-gradient(to top, var(--cor-de-fundo-oregon),
+             transparent 160px),
+            var(--cor-de-fundo-oregon);
+    padding: 50px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+/* ==== 9. Cards (.card) ==== */
+
+.card-suica {
+
+    background: var(--cor-principal-suica);
+    border: 1px solid #33553a;
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: #000000;
+    text-align: center;
+    transition: transform .8s, box-shadow .7s;
+    cursor: pointer
+}
+
+.card-suica:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(10, 175, 10, 0.3);
+
+    
+    
+}
+
+ 
+.card-oregon {
+    background: var(--cor-principal-oregon);
+    border: 1px solid #5165046d;
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: #e2e8f0;
+    text-align: center;
+    transition: transform .7s, box-shadow .7s;
+    cursor: pointer
+}
+
+.card-oregon:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(111, 130, 13, 0.3)
+
+}
+
+
+
+/* ==== 10. Rodapé ==== */
+
+footer {
+    display: block;
+    text-align: center;
+    background:
+            linear-gradient(to bottom, var(--cor-de-fundo-oregon),
+             transparent 160px),
+            linear-gradient(to top, var(--cor-secundaria-oregon),
+             transparent 160px),
+            var(--cor-de-fundo-suica);
+    padding: 50px;
+
+}
